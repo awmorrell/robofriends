@@ -1,12 +1,12 @@
 import React from 'react';
 import Card from './Card.js';
 
-
+/* Can just use empty tags <></> instead of <div> if no styles or attributes are used */
 const CardList = ({ robots }) => {
 	return (
-		<div>
-      {
-      	robots.map((user, i) => {
+		<> 
+			{
+      			robots.map((user, i) => {
 					return (
 						<Card 
 							key={robots[i].id} 
@@ -16,8 +16,8 @@ const CardList = ({ robots }) => {
 							/>
 					);
 				})
-      }
-    </div>
+      		}
+    	</>
 	);
 }
 
